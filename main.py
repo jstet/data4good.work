@@ -9,6 +9,9 @@ combined_data = []
 # Path to the directory containing the JSON files
 json_files_path = 'organizations/*.json'
 
+content_folder = "content"
+output_folder = "docs"
+
 # Iterate through each JSON file
 for file_path in glob.glob(json_files_path):
     with open(file_path, 'r') as file:
@@ -18,7 +21,7 @@ for file_path in glob.glob(json_files_path):
         combined_data.append(data)
 
 # Write the combined data to a JavaScript file
-output_file_path = 'output/data/data.js'
+output_file_path = f'{output_folder}/data/data.js'
 with open(output_file_path, 'w') as output_file:
     output_file.write(f'const organizationData = {json.dumps(combined_data)};')
 
@@ -29,10 +32,6 @@ with open('templates/wrapper.html.jinja', 'r') as file:
 
 # Create a Jinja template object
 wrapper_template = Template(wrapper_template_file)
-
-# Folder path containing the content HTML files
-content_folder = "content"
-output_folder = "output"
 
 # Loop through the content folder
 for filename in os.listdir(content_folder):
