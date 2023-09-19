@@ -1,7 +1,6 @@
 <script>
   import "../app.css";
-
-  export const prerender = true;
+  
 </script>
 
 
@@ -38,7 +37,7 @@
       
     </div>
     <div class="navbar-end">
-      <a href="#list" class="btn btn-sm lg:btn-md lg:mr-3">To List</a>
+      <a href="/#list" class="btn btn-sm lg:btn-md lg:mr-3">To List</a>
     </div>
   </div>
 <div class="min-h-[90vh]">
