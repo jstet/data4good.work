@@ -1,6 +1,5 @@
 <script>
     import { organizations } from "$lib/organizations/data";
-    console.log(organizations);
 </script>
 
 <div class="min-h-[90vh]">
