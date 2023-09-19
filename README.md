@@ -1,38 +1,9 @@
-# create-svelte
+# data4good.work
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A simple website containing a list of organizations that leverage data for social and environmental good. 
 
-## Creating a project
+To contribute, see [this](https://github.com/jstet/data4good.work) document.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Motivation
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+The motivation behind this project is to provide an overview of organizations that are actively using data to tackle societal and environmental challenges. It can be challenging to find the right organization for those interested in pursuing a career in this area. This website aims to bridge that gap by offering a curated list of organizations, making it easier for individuals to find opportunities in the Data4Good sector.
