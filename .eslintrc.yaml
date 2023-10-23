@@ -4,11 +4,10 @@ env:
 extends:
   - google
   - prettier
-plugins:
-  - 'svelte3'
+  - plugin:svelte/recommended
 overrides:
   - files: ['*.svelte']
-    processor: 'svelte3/svelte3'
+    processor: 'svelte/svelte'
 parserOptions:
   ecmaVersion: latest
   sourceType: module
