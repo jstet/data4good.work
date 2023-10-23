@@ -1,13 +1,11 @@
 <script>
-  import "../app.css";
-  
+  import '../app.css';
 </script>
 
-
-  <div class="navbar bg-neutral text-neutral-content h-[10vh]">
-    <div class="navbar-start">
-      <a href="/" class="btn btn-ghost normal-case text-2xl">data4good.work</a>
-      <!-- <div class="dropdown">
+<div class="navbar h-[10vh] bg-neutral text-neutral-content">
+  <div class="navbar-start">
+    <a href="/" class="btn btn-ghost text-2xl normal-case">data4good.work</a>
+    <!-- <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,28 +30,26 @@
           <li><a class="text-lg"  href="https://github.com/jstet/data4good.work">Contribute</a></li>
         </ul>
       </div> -->
-    </div>
-    <div class="navbar-center">
-      
-    </div>
-    <div class="navbar-end">
-      <a href="/#list" class="btn btn-sm lg:btn-md lg:mr-3">To List</a>
-    </div>
   </div>
+  <div class="navbar-center" />
+  <div class="navbar-end">
+    <a href="/#list" class="btn btn-sm lg:btn-md lg:mr-3">To List</a>
+  </div>
+</div>
 <div class="min-h-[90vh]">
   <slot />
 </div>
-<footer
-class=" p-4 bg-neutral text-neutral-content text-center" 
->
-<p class="text-sm pt-2">
-  This website is maintained by a community of contributors. For more
-  information and to contribute, visit the <a href="https://github.com/jstet/data4good.work" class="link">repository</a> where
-  you can find the source code.
-</p>
-<br>
+<footer class=" bg-neutral p-4 text-center text-neutral-content">
+  <p class="pt-2 text-sm">
+    This website is maintained by a community of contributors. For more
+    information and to contribute, visit the <a
+      href="https://github.com/jstet/data4good.work"
+      class="link">repository</a
+    > where you can find the source code.
+  </p>
+  <br />
 
-<p class="text-sm pb-2">
-  <a class="link" href="/imprint">Imprint</a>
-</p>
+  <p class="pb-2 text-sm">
+    <a class="link" href="/imprint">Imprint</a>
+  </p>
 </footer>

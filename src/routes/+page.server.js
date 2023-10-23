@@ -5,9 +5,9 @@ import {indexQuery} from './query.js';
 export async function load({params}) {
   const data = await directus_fetch(indexQuery, {});
 
-  const organizations = data.Organizations
+  const organizations = data.Organizations;
 
   return {
-    Organizations: organizations
+    Organizations: organizations,
   };
 }
