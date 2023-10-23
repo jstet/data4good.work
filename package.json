@@ -8,14 +8,13 @@
     "preview": "vite preview",
     "format": "npx prettier -w .",
     "format_check": "npx prettier --check .",
-    "quick_format": "npx pretty-quick --staged",
-    "lint": "npx eslint src/",
+    "lint": "npx eslint src/ --fix",
     "prepare": "husky install"
   },
     "lint-staged": {
       "**/*.{js,jsx,ts,tsx}":[
         "npx prettier --write",
-        "npx eslint --fix"
+        "npx eslint src/ --fix"
       ]
     },
   "devDependencies": {
