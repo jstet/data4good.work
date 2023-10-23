@@ -1,8 +1,5 @@
 import {error} from '@sveltejs/kit';
-import {
-  PUBLIC_API_URL,
-} from '$env/static/public';
-
+import {PUBLIC_API_URL} from '$env/static/public';
 
 /*
  * Validate graphql variables wrt. the expected variables
@@ -91,5 +88,3 @@ async function directus_fetch(
 }
 
 export default directus_fetch;
-
-

@@ -1,12 +1,21 @@
 # Contribution
+
 ## General contribution process
+
 Contribute to this repository by opening a pull request.
+
 ## Organizations
+
 The table you see on the page is rendered with data coming from the file `data.json` located `src/lib/organizations/`.
+
 ### Edit an organization
+
 To edit an organization, simply search for it in `data.json` and edit the relevant values.
+
 ### Add an organization
+
 To add an organization, copy an entry of the array contained in `data.json`, for example
+
 ```
 {
  "name": "&effect",
@@ -17,4 +26,5 @@ To add an organization, copy an entry of the array contained in `data.json`, for
     "data_tech": ["Data Engineering", "Data Analysis"]
 }
 ```
-Paste this object at the end of the array and overwrite the values. 
+
+Paste this object at the end of the array and overwrite the values.
