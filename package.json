@@ -11,12 +11,12 @@
     "lint": "npx eslint src/ --fix",
     "prepare": "husky install"
   },
-    "lint-staged": {
-      "**/*.{js,jsx,ts,tsx,svelte}":[
-        "npx prettier --write",
-        "npx eslint src/ --fix"
-      ]
-    },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,svelte}": [
+      "npx prettier --write",
+      "npx eslint src/ --fix"
+    ]
+  },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.1.0",
     "@sveltejs/adapter-static": "^2.0.3",
@@ -36,7 +36,6 @@
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
-    "pretty-quick": "^3.1.3",
     "svelte": "^4.2.2",
     "svelte-check": "^3.5.2",
     "tailwindcss": "^3.3.3",
