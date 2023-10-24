@@ -3,10 +3,10 @@
     <h1 class="">Imprint</h1>
     <h3>Information according to &sect; 5 TMG:</h3>
     <p>Jonas Stettner</p>
-    <p>data4good-work@meemail.eu</p>
+    <p>mail@jstet.net</p>
     <h3>Responsible for the content according to &sect; 55 Abs. 2 RStV:</h3>
     <p>Jonas Stettner</p>
-    <p>data4good-work@meemail.eu</p>
+    <p>mail@jstet.net</p>
 
     <h3>Disclaimer:</h3>
     <p>
