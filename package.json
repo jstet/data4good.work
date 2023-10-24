@@ -12,7 +12,7 @@
     "prepare": "husky install"
   },
     "lint-staged": {
-      "**/*.{js,jsx,ts,tsx}":[
+      "**/*.{js,jsx,ts,tsx,svelte}":[
         "npx prettier --write",
         "npx eslint src/ --fix"
       ]
