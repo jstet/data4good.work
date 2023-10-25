@@ -1,8 +1,12 @@
 export const indexQuery = `
-query Index (
-	
-) {
-	
+query {
+	Organizations {
+		name
+		type
+		description
+		link
+		data_tech
+		sector
 	}
 }
 `;
