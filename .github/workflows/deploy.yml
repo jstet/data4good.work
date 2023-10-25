@@ -23,6 +23,7 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          PUBLIC_API_URL: 'https://cms.jstet.net'
         run: |
           npm run build
 

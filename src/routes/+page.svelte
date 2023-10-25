@@ -1,6 +1,8 @@
 <script>
   export let data;
-  $: organizations = data.organizations;
+  $: organizations = data.Organizations;
+
+  $: console.log(organizations);
 </script>
 
 <div class="min-h-[90vh]">
@@ -48,7 +50,15 @@
       <div class="divider px-4 lg:divider-horizontal" />
       <div class="card rounded-box grid flex-grow items-center">
         <p class="max-w-[600px] px-4 py-2 text-lg">
-           In the context of this website, <strong>Data4Good</strong> refers to the use of data for social and environmental good. This includes applying tools and techniques related to Data Science and developing data-driven solutions. Data4Good is driven by the belief that data can be a powerful force for good, addressing pressing challenges instead of solely focusing on maximizing profits. However, it is important for Data4Good to adhere to the ethical practices of prioritizing privacy and consent, ensuring data security, promoting transparency, mitigating biases for fairness, and establishing accountability for data impact.
+          In the context of this website, <strong>Data4Good</strong> refers to the
+          use of data for social and environmental good. This includes applying tools
+          and techniques related to Data Science and developing data-driven solutions.
+          Data4Good is driven by the belief that data can be a powerful force for
+          good, addressing pressing challenges instead of solely focusing on maximizing
+          profits. However, it is important for Data4Good to adhere to the ethical
+          practices of prioritizing privacy and consent, ensuring data security,
+          promoting transparency, mitigating biases for fairness, and establishing
+          accountability for data impact.
         </p>
       </div>
     </div>
