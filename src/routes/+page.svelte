@@ -1,4 +1,5 @@
 <script>
+  import {processDirectusValue, translateSDG} from '$lib/js/helpers.js';
   export let data;
   $: organizations = data.Organizations;
 
@@ -54,14 +55,15 @@
           the use of data for social and environmental good. Data4Good is driven
           by the belief that data can be a powerful force for good, addressing
           pressing challenges instead of solely focusing on maximizing profits.
-          More specific, Data4GGood means applying methodologies from at least
-          one of the fields of Data Analysis, Data Collection, Data
-          Intelligence, Data Engineering, Data Visualization, Geographical
-          Information Systems, Machine Learning, Natural Language Processing,
-          Data Journalism, Open Data, Data Ethics or Data Literacy for causes
-          that are compatible with the
-          <a href="https://sdgs.un.org/goals">Sustainable Development Goals</a>.
-          Additionally, Data4Good must adhere to the ethical practices of
+          More specifically, Data4Good means applying methodologies from at
+          least one of the fields of Data Analysis, Data Intelligence, Data
+          Engineering, Data Visualization, Geographical Information Systems,
+          Machine Learning, Natural Language Processing, Data Journalism, Open
+          Data, Data Ethics, or Data Literacy for causes that are compatible
+          with the
+          <a href="https://sdgs.un.org/goals" class="link-neutral link"
+            >Sustainable Development Goals</a
+          >. Additionally, Data4Good must adhere to the ethical practices of
           prioritizing privacy and consent, ensuring data security, promoting
           transparency, mitigating biases for fairness, and establishing
           accountability for data impact.
@@ -86,16 +88,16 @@
               <div class="mb-2 flex flex-wrap">
                 <span
                   class="text-semi-bold badge badge-info badge-md mb-3 mr-2 text-info-content"
-                  >{organization.type}
+                  >{processDirectusValue(organization.type)}
                 </span>
                 <span
                   class="text-semi-bold badge badge-warning badge-md mb-2 mr-2 text-warning-content"
-                  >{organization.sector}
+                  >{translateSDG(organization.cause)}
                 </span>
-                {#each organization.data_tech as tech}
+                {#each organization.field as field}
                   <span
                     class="text-semi-bold badge badge-success badge-md mb-2 mr-2 text-success-content"
-                    >{tech}
+                    >{processDirectusValue(field)}
                   </span>
                 {/each}
               </div>
