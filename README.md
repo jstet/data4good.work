@@ -12,7 +12,7 @@ The motivation behind this project is to provide an overview of organizations th
 
 The content of data4good.work is managed with a Directus instance running at [cms.jstet.net](https://cms.jstet.net). To contribute content, you need an account. Write an E-Mail to mail@jstet.net and I will send you an invitation. 
 
-If you don't want to add content yourself, write me an E-Mail describing the changes you would suggest.
+If you don't want to add content yourself, write me an E-Mail or open an issue describing the changes you would suggest.
 
 ## Dev Setup
 
@@ -25,3 +25,14 @@ If you don't want to add content yourself, write me an E-Mail describing the cha
     ``` bash
     npm run prepare
     ```
+
+
+
+
+
+
+
+
+
+
+
