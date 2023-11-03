@@ -50,26 +50,33 @@
       </div>
       <div class="divider px-4 lg:divider-horizontal" />
       <div class="card rounded-box grid flex-grow items-center">
-        <p class="max-w-[600px] px-4 py-2 text-lg">
-          In the context of this website, <strong>Data4Good</strong> refers to the
-          use of data for social and environmental good. Data4Good is driven by the
-          belief that data can be a powerful force for good, addressing pressing
-          challenges instead of solely focusing on maximizing profits.
-        </p>
-        <p>
-          More specifically, Data4Good means applying methodologies from at
-          least one of the fields of Data Analysis, Data Intelligence, Data
-          Engineering, Data Visualization, Geographical Information Systems,
-          Machine Learning, Natural Language Processing, Data Journalism, Open
-          Data, Data Ethics, or Data Literacy for causes that are compatible
-          with the
-          <a href="https://sdgs.un.org/goals" class="link-neutral link"
-            >Sustainable Development Goals</a
-          >. Additionally, Data4Good must adhere to the ethical practices of
-          prioritizing privacy and consent, ensuring data security, promoting
-          transparency, mitigating biases for fairness, and establishing
-          accountability for data impact.
-        </p>
+        <div class="max-w-[600px] px-4 py-2 text-lg">
+          <p>
+            In the context of this website, <strong>Data4Good</strong> refers to
+            the use of data for social and environmental good. Data4Good is driven
+            by the belief that data can be a powerful force for good, addressing
+            pressing challenges instead of solely focusing on maximizing profits.
+          </p>
+          <br />
+          <p>
+            More specifically, Data4Good means applying methodologies from at
+            least one of the fields of Data Analysis, Data Intelligence, Data
+            Engineering, Data Visualization, Geographical Information Systems,
+            Machine Learning, Natural Language Processing, Data Journalism, Open
+            Data, Data Ethics, or Data Literacy for causes that are compatible
+            with the
+            <a href="https://sdgs.un.org/goals" class="link-neutral link"
+              >Sustainable Development Goals</a
+            >.
+          </p>
+          <br />
+          <p>
+            Additionally, Data4Good must adhere to the ethical practices of
+            prioritizing privacy and consent, ensuring data security, promoting
+            transparency, mitigating biases for fairness, and establishing
+            accountability for data impact.
+          </p>
+        </div>
       </div>
     </div>
   </div>
