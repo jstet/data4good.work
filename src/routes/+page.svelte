@@ -61,12 +61,29 @@
     </div>
   </div>
 </div>
-<div class="m-auto max-w-[1200px] px-4">
+<!-- <div class="m-auto max-w-[1200px] px-4">
   <h2 class="font-semi-bold m-auto py-12 text-2xl">Organization Types</h2>
-</div>
+  <p>Data4Good Organizations are classified by their legal <span class="font-semi-bold badge badge-md bg-base-200">framework</span> and their operational <span class="font-semi-bold badge badge-md bg-info"> emphasis</span>. </p>
+</div> -->
 <div id="list" class="m-auto max-w-[1200px] pb-12">
   <div class="px-4">
-    <h2 class="font-semi-bold m-auto py-12 text-4xl">Organizations</h2>
+    <h2 class="font-semi-bold m-auto pb-7 pt-12 text-4xl">Organizations</h2>
+    <p class="inline-block flex items-stretch pb-4">
+      Data4Good Organizations are classified by their legal <span
+        class="font-semi-bold badge badge-md ml-1 mr-0.5 self-center bg-base-200"
+        >framework</span
+      >, their operational
+      <span
+        class="font-semi-bold badge badge-md ml-1 mr-0.5 self-center bg-info"
+      >
+        emphasis</span
+      >, the
+      <span
+        class="mx-1 inline-flex h-6 w-6 items-center justify-center self-center border-none font-oswald text-xs font-[500] text-white"
+        style="background-color: {getSDGColor('17')};"><span></span>SDG</span
+      >
+      they contribute to and their office locations {getFlagEmoji('Worldwide')}.
+    </p>
     <div class=" m-auto rounded border-t">
       {#each organizations as organization}
         <div class="grid grid-cols-5 border-x border-b">
@@ -78,14 +95,14 @@
                     >{organization.name}</a
                   >
                 </div>
-                <div class="flex flex-wrap text-lg">
+                <div class="flex flex-wrap pt-1 text-lg">
                   <span
                     class="font-semi-bold badge badge-md rounded-l-full bg-base-200"
-                    >{organization.type.framework.abbreviation}
+                    >{organization.type.framework.name}
                   </span>
                   <span
                     class="font-semi-bold badge badge-md rounded-r-full bg-info"
-                    >{organization.type.emphasis.abbreviation}
+                    >{organization.type.emphasis.name}
                   </span>
                 </div>
               </div>
