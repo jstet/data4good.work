@@ -28,7 +28,9 @@ If you don't want to add content yourself, write me an E-Mail or open an issue d
 
 
 
+### Sources
 
+- [SDG Design Guide](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf)
 
 
 

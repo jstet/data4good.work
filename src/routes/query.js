@@ -3,9 +3,18 @@ query {
 	Organizations {
 		name
 		url
-		type
+		type{
+			id
+            framework{
+                name
+                abbreviation
+            }
+            emphasis{
+                name
+                abbreviation
+            }
+		}
 		cause
-		field
 		office_locations_country
 		description
 	}

@@ -1,9 +1,7 @@
 <script>
-  import {processDirectusValue, translateSDG} from '$lib/js/helpers.js';
+  import {getFlagEmoji, getSDGColor} from '$lib/js/helpers.js';
   export let data;
   $: organizations = data.Organizations;
-
-  $: console.log(organizations);
 </script>
 
 <div class="min-h-[90vh]">
@@ -89,26 +87,38 @@
         <div class="grid grid-cols-5 border-x border-b">
           <div class="col-span-5 lg:col-span-2">
             <div class="px-4 pt-3 lg:py-2">
-              <p class="mb-3 text-lg font-bold lg:mb-3">
-                <a href={organization.link} class="link-hover link underline"
-                  >{organization.name}</a
-                >
-              </p>
-              <div class="mb-2 flex flex-wrap">
-                <span
-                  class="text-semi-bold badge badge-info badge-md mb-3 mr-2 text-info-content"
-                  >{processDirectusValue(organization.type)}
-                </span>
-                <span
-                  class="text-semi-bold badge badge-warning badge-md mb-2 mr-2 text-warning-content"
-                  >{translateSDG(organization.cause)}
-                </span>
-                {#each organization.field as field}
+              <div class="grid grid-cols-2">
+                <div class="mb-3 text-xl font-bold lg:mb-5">
+                  <a href={organization.link} class="link"
+                    >{organization.name}</a
+                  >
+                </div>
+                <div class="flex flex-wrap text-lg">
                   <span
-                    class="text-semi-bold badge badge-success badge-md mb-2 mr-2 text-success-content"
-                    >{processDirectusValue(field)}
+                    class="font-semi-bold badge badge-md rounded-l-full bg-base-200"
+                    >{organization.type.framework.abbreviation}
                   </span>
-                {/each}
+                  <span
+                    class="font-semi-bold badge badge-md rounded-r-full bg-info"
+                    >{organization.type.emphasis.abbreviation}
+                  </span>
+                </div>
+              </div>
+              <div class="mb-4 grid grid-cols-2">
+                <div class="flex w-3/4 flex-wrap lg:w-10/12">
+                  {#each organization.office_locations_country as country}
+                    <span class="mr-1 text-xl">{getFlagEmoji(country)}</span>
+                  {/each}
+                </div>
+                <div class="flex flex-wrap">
+                  {#each organization.cause as cause}
+                    <span
+                      class="mr-2 flex h-9 w-9 items-center justify-center border-none font-oswald text-base font-[500] text-white"
+                      style="background-color: {getSDGColor(cause)};"
+                      ><span></span>{cause}</span
+                    >
+                  {/each}
+                </div>
               </div>
             </div>
           </div>
