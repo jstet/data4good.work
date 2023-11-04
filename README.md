@@ -11,7 +11,9 @@ The motivation behind this project is to provide an overview of organizations th
 
 The content of data4good.work is managed with a Directus instance running at [cms.jstet.net](https://cms.jstet.net). To contribute content, you need an account. Write an E-Mail to mail@jstet.net and I will send you an invitation. 
 
-You can find some general information that partly apply to this websites CMS as well [here](https://docs.correlaid.org/wiki/infrastructure/directus-content-management-system).
+The website is static and can be built either with a push to main or by selecting the manual deploy flow on the right side of the Organization collection in Directus. 
+
+You can find some general information that partly applies to this websites CMS as well [here](https://docs.correlaid.org/wiki/infrastructure/directus-content-management-system).
 
 If you don't want to add content yourself, write me an E-Mail or open an issue describing the changes you would suggest.
 
