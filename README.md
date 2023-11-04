@@ -2,7 +2,6 @@
 
 A simple website containing a list of organizations that leverage data for social and environmental good.
 
-To contribute, see [this](https://github.com/jstet/data4good.work) document.
 
 ## Motivation
 
@@ -25,8 +24,6 @@ If you don't want to add content yourself, write me an E-Mail or open an issue d
     ``` bash
     npm run prepare
     ```
-
-
 
 ### Sources
 
