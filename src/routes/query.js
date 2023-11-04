@@ -30,7 +30,7 @@ query {
 			name
 			abbreviation
 		}
-		description
+		description 
 	}
 }
 `;
