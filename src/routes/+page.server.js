@@ -7,5 +7,6 @@ export async function load({}) {
 
   return {
     Organizations: data.Organizations,
+    Data4Good_Definition: data.Data4Good_Definition,
   };
 }
