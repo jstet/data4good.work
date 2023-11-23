@@ -3,7 +3,7 @@ import {indexQuery} from './query.js';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({}) {
-  const data = await directus_fetch(indexQuery, {});
+  const data = await directus_fetch(indexQuery);
 
   return {
     Organizations: data.Organizations,
