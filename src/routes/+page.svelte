@@ -43,11 +43,11 @@
   </div>
   <div
     id="definition"
-    class="m-auto mb-12 flex min-h-[45vh] max-w-[1200px] py-12"
+    class="m-auto flex min-h-[45vh] max-w-[1200px] py-12 lg:mb-12"
   >
     <div class="flex w-full flex-col lg:flex-row">
       <div class="card rounded-box grid flex-grow items-center">
-        <h2 class="font-semi-bold px-4 py-12 text-4xl">Definition</h2>
+        <h2 class="font-semi-bold px-4 py-6 text-4xl lg:py-12">Definition</h2>
       </div>
       <div class="divider px-4 lg:divider-horizontal" />
       <div class="card rounded-box grid flex-grow items-center">
@@ -67,8 +67,8 @@
 </div> -->
 <div id="list" class="m-auto max-w-[1200px] pb-12">
   <div class="px-4">
-    <h2 class="font-semi-bold m-auto pb-7 pt-12 text-4xl">Organizations</h2>
-    <p class="inline-block flex items-stretch pb-4">
+    <h2 class="font-semi-bold m-auto pb-8 text-4xl">Organizations</h2>
+    <p class="pb-10 lg:pb-4">
       Data4Good Organizations are classified by their legal <span
         class="font-semi-bold badge badge-md ml-1 mr-0.5 self-center bg-base-200"
         >framework</span
