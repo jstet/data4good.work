@@ -30,8 +30,7 @@
           <span
             >This website is a living document. Follow the instructions in <a
               class="link"
-              href="https://github.com/jstet/data4good.work/blob/acc6a0d9071c334d59628e636a7013e69bb2ddf9/README.md"
-              >this README</a
+              href="https://github.com/jstet/data4good.work">this README</a
             >
             to suggest changes.</span
           >
