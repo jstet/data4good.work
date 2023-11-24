@@ -3,8 +3,8 @@
   import {getFlagEmoji, getSDGColor} from '$lib/js/helpers.js';
   import SvelteMarkdown from 'svelte-markdown';
   export let data;
-  $: organizations = data.Organizations;
-  $: data4good = data.Data4Good_Definition.content;
+  $: organizations = data.data.Organizations;
+  $: data4good = data.data.Data4Good_Definition.content;
 </script>
 
 <div class="min-h-[90vh]">
