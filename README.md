@@ -28,6 +28,10 @@ If you don't want to add content yourself, write me an E-Mail or open an issue d
     ``` bash
     npm run prepare
     ```
+4. Create .env
+    ```
+    PUBLIC_API_URL=https://cms.jstet.net
+    ```
 
 ### Sources
 
