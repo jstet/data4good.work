@@ -26,30 +26,39 @@
     </p>
     <div class=" m-auto rounded border-t">
       {#each organizations as organization}
-        <div class="grid grid-cols-5 border-x border-b">
-          <div class="col-span-5 lg:col-span-2">
-            <div class="px-4 pt-3 lg:py-2">
-              <div class="grid grid-cols-2">
-                <div class="mb-3 text-xl font-bold lg:mb-5">
+        <div class="grid grid-cols-6 border-x border-b">
+          <div class="col-span-6 lg:col-span-3">
+            <div class="px-4 pb-6 pt-3 lg:pb-2 lg:pt-2">
+              <div class="lg:grid lg:grid-cols-2">
+                <div class="mb-3 flex text-xl font-bold lg:mb-5">
                   <a href={organization.link} class="link"
                     >{organization.name}</a
                   >
+                  <div class="flex flex-wrap pl-3 lg:hidden">
+                    {#each organization.office_locations_country as country}
+                      <span class="mr-1 text-xl">{getFlagEmoji(country)}</span>
+                    {/each}
+                  </div>
                 </div>
-                <Type
-                  framework={organization.type.framework.name}
-                  emphasis={organization.type.emphasis.name}
-                />
+                <div class="py-2 lg:py-0">
+                  <Type
+                    framework={organization.type.framework.name}
+                    emphasis={organization.type.emphasis.name}
+                  />
+                </div>
               </div>
-              <div class="mb-4 grid grid-cols-2">
-                <div class="flex w-3/4 flex-wrap lg:w-10/12">
+              <div class="lg:mb-4 lg:grid lg:grid-cols-2">
+                <div
+                  class="flex hidden w-3/4 flex-wrap py-4 lg:flex lg:w-10/12 lg:py-0"
+                >
                   {#each organization.office_locations_country as country}
-                    <span class="mr-1 text-xl">{getFlagEmoji(country)}</span>
+                    <span class="mr-2 text-xl">{getFlagEmoji(country)}</span>
                   {/each}
                 </div>
-                <div class="flex flex-wrap">
+                <div class="flex flex-wrap pt-4 lg:pt-0">
                   {#each organization.cause as cause}
                     <span
-                      class="mr-2 flex h-9 w-9 items-center justify-center border-none font-oswald text-base font-[500] text-white"
+                      class="mb-2 mr-2 flex h-9 w-9 items-center justify-center border-none font-oswald text-base font-[500] text-white"
                       style="background-color: {getSDGColor(cause)};"
                       ><span></span>{cause}</span
                     >
@@ -59,7 +68,7 @@
             </div>
           </div>
 
-          <div class="col-span-5 lg:col-span-3 lg:border-l">
+          <div class="col-span-6 lg:col-span-3 lg:border-l">
             <div class="px-4 pb-6 lg:py-2">
               <p class="text-sm">
                 {organization.description}
