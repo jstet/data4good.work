@@ -6,7 +6,7 @@
 
 <div class="m-auto max-w-[1200px] px-4">
   <div class="py-12">
-    <h2 class="m-auto pb-8 text-4xl font-bold">Organizations Types</h2>
+    <h2 class="m-auto pb-8 text-4xl font-bold">Organization Types</h2>
     <p>
       Types are combinations of <span
         class="font-semi-bold badge badge-md bg-base-200">framework</span
