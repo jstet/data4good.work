@@ -18,9 +18,6 @@ query {
 		office_locations_country
 		description
 	}
-	Data4Good_Definition{
-		content
-	}
 	Organization_Types{
 		framework{
 			name

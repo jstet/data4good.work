@@ -23,6 +23,7 @@
         style="background-color: {getSDGColor('17')};"><span></span>SDG</span
       >
       they contribute to and their office locations {getFlagEmoji('Worldwide')}.
+      See <a class="link" href="/definitions">Definitions</a> for more info.
     </p>
     <div class=" m-auto rounded border-t">
       {#each organizations as organization}
