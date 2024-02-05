@@ -12,16 +12,18 @@
       <ul
         class="menu dropdown-content rounded-box menu-md z-[1] mt-2 w-52 bg-base-100 p-2 text-base-content shadow"
       >
-        <li><a class="text-lg" href="/types">Types</a></li>
         <li><a class="text-lg" href="/list">Organizations</a></li>
+        <li><a class="text-lg" href="/definitions">Definitions</a></li>
       </ul>
     </div>
     <a href="/" class="btn btn-ghost text-2xl normal-case">data4good.work</a>
   </div>
   <div class="navbar-end hidden pr-12 lg:flex">
-    <a class="btn btn-md my-4 mr-6 text-lg normal-case" href="/types">Types</a>
     <a class="btn btn-md my-4 mr-6 text-lg normal-case" href="/list"
       >Organizations</a
+    >
+    <a class="btn btn-md my-4 mr-6 text-lg normal-case" href="/definitions"
+      >Definitions</a
     >
   </div>
 </div>

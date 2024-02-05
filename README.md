@@ -1,6 +1,6 @@
 # data4good.work
 
-A simple website containing a list of organizations that leverage data for social and environmental good.
+A simple website containing a taxonomy and a  list of organizations that leverage data to advance the Sustainable Development Goals.
 
 
 ## Motivation
