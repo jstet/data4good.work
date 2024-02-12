@@ -1,6 +1,7 @@
 <script>
   export let data;
   import {getSDGColor} from '$lib/js/helpers.js';
+  import Category from '$lib/components/Category.svelte';
   import Type from '$lib/components/Type.svelte';
 
   $: types = data.data.Organization_Types;
@@ -37,12 +38,12 @@
     <p class="pb-6" id="taxonomy">
       A <strong>Taxonomy</strong> of such organizations is built out of
       combinations of two categories:
-      <span class="font-semi-bold badge badge-md bg-base-200">Framework</span>
-      refers to the overarching categories of organizations based on their
-      structure and mission.
-      <span class="font-semi-bold badge badge-md bg-info">Emphasis</span> refers
-      to the specific focus or area of operation. Find a list of identified Data4Good
-      organization types below.
+      <Category category="framework" label="Framework" size="md" />
+      and refers to the overarching categories of organizations based on their structure
+      and mission.
+      <Category category="emphasis" label="Emphasis" size="md" /> refers to the specific
+      focus or area of operation. Find a list of identified Data4Good organization
+      types below.
     </p>
   </div>
 
