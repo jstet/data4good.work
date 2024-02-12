@@ -1,4 +1,6 @@
 <script>
+  import Category from '$lib/components/Category.svelte';
+
   export let framework;
   export let emphasis;
   export let size = 'md';
@@ -7,12 +9,12 @@
 </script>
 
 <div class="flex flex-wrap pt-1">
-  <span
-    class="font-semi-bold badge badge-{size} rounded-l-full {padding} bg-base-200 text-{size}"
-    >{framework}
-  </span>
-  <span
-    class="font-semi-bold badge badge-{size} rounded-r-full {padding} bg-info text-{size}"
-    >{emphasis}
-  </span>
+  <Category
+    category="framework"
+    label={framework}
+    {size}
+    half={true}
+    {padding}
+  />
+  <Category category="emphasis" label={emphasis} {size} half={true} {padding} />
 </div>
