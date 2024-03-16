@@ -6,7 +6,7 @@
 
 <Navbar />
 
-<div class="min-h-[90vh]">
+<div class="min-h-[85vh]">
   <slot />
 </div>
 

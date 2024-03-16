@@ -38,3 +38,7 @@ const sdgs = {
 export function getSDGColor(goal) {
   return sdgs[goal].hex;
 }
+
+export function getSDGName(goal) {
+  return sdgs[goal].name.toUpperCase();
+}

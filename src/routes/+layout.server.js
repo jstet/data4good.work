@@ -1,4 +1,6 @@
 import {indexQuery} from './query.js';
+import _ from 'lodash';
+
 import {PUBLIC_API_URL} from '$env/static/public';
 
 /** @type {import('./$types').PageServerLoad} */
@@ -13,5 +15,12 @@ export async function load({fetch}) {
     headers: headers,
   });
 
-  return Promise.resolve(response.json());
+  const data = await response.json();
+
+  const procOrganizations = _.map(data.data.Organizations, (org) => ({
+    ...org,
+    cause: _.take(org.cause, 3),
+  }));
+
+  return {organizations: procOrganizations};
 }
