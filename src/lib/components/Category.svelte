@@ -6,9 +6,9 @@
 
   const bg_color =
     category === 'emphasis'
-      ? 'bg-info'
+      ? 'bg-base-200'
       : category === 'framework'
-        ? 'bg-base-200'
+        ? 'bg-base-300'
         : undefined;
   const badge_size =
     size === 'lg' ? 'badge-lg' : size === 'md' ? 'badge-md' : undefined;
@@ -22,6 +22,7 @@
       : '';
 </script>
 
-<span class="font-semi-bold badge {badge_size} {bg_color} {rounded}"
+<span
+  class="font-semi-bold badge {badge_size} {bg_color} {rounded} border-none text-base-content"
   >{label}</span
 >
