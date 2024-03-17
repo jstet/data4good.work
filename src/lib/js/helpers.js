@@ -39,6 +39,9 @@ export function getSDGColor(goal) {
   return sdgs[goal].hex;
 }
 
-export function getSDGName(goal) {
-  return sdgs[goal].name.toUpperCase();
+export function getSDGName(goal, upper = true) {
+  if (upper) {
+    return sdgs[goal].name.toUpperCase();
+  }
+  return sdgs[goal].name;
 }
