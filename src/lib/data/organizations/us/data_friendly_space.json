@@ -1,0 +1,17 @@
+{
+    "name": "Data Friendly Space",
+    "cause": [17],  
+    "url": "https://datafriendlyspace.org/",
+    "description": "Data Friendly Space is a U.S. based INGO working across six continents to make modern data systems and data science accessible to the humanitarian and development communities. Our mission is to render informed, effective, and targeted aid the norm - not the exception - by supporting the global aid community through responsible, resource-efficient innovation.",
+    "office_locations_country": [
+      "us"
+    ],
+    "remote_possible": true, 
+    "initiative_application_possible": null,
+    "type": {
+      "framework": "Non-Profit",
+      "emphasis": "Consulting"
+    },
+    "working_language": ["en"] 
+  }
+  

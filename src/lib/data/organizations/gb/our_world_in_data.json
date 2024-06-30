@@ -1,0 +1,17 @@
+{
+    "name": "Our World in Data",
+    "cause": [17],  
+    "url": "https://ourworldindata.org/about",
+    "description": "Detailed description present",
+    "office_locations_country": [
+      "gb"
+    ],
+    "remote_possible": true, 
+    "initiative_application_possible": null, 
+    "type": {
+      "framework": "Non-Profit",
+      "emphasis": "Media"
+    },
+    "working_languages":  ["en"] 
+  }
+  

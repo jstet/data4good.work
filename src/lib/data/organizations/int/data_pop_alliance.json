@@ -1,0 +1,18 @@
+{
+    "name": "Data-Pop Alliance",
+    "cause": [17], 
+    "url": "https://datapopalliance.org/",
+    "description": "Since 2013, Data-Pop Alliance has worked to apply cutting edge data science to solve the world’s most pressing problems. As the 2030 deadline for the UN sustainable development goals approaches, we believe novel approaches are needed to enhance the efficacy of the global development sector and reach those most in need. ",
+    "office_locations_country": [
+      "mx",
+      "us"
+    ],
+    "working_languages": ["en"],
+    "remote_possible": true,
+    "initiative_application_possible": null, 
+    "type": {
+      "framework": "Non-Profit",
+      "emphasis": "Cause Focused"
+    }
+  }
+  

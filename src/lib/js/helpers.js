@@ -1,4 +1,6 @@
 import countryEmoji from 'country-emoji';
+import fs from 'fs';
+import path from 'path';
 
 export function getFlagEmoji(countryName) {
   if (countryName == 'Remote') {
@@ -44,4 +46,29 @@ export function getSDGName(goal, upper = true) {
     return sdgs[goal].name.toUpperCase();
   }
   return sdgs[goal].name;
+}
+
+export async function loadJsonFiles(folderPath) {
+  // Check folder exists
+  if (!fs.existsSync(folderPath)) {
+    throw new Error(`Folder ${folderPath} does not exist`);
+  }
+
+  const combinedData = [];
+
+  const subDirs = fs.readdirSync(folderPath);
+  for (const subDir of subDirs) {
+    const subDirPath = path.join(folderPath, subDir);
+    const files = fs.readdirSync(subDirPath);
+    for (const file of files) {
+      const filePath = path.join(subDirPath, file);
+      const stats = fs.statSync(filePath);
+      if (stats.isFile() && path.extname(filePath) === '.json') {
+        const data = fs.readFileSync(filePath, 'utf8');
+        combinedData.push(JSON.parse(data));
+      }
+    }
+  }
+
+  return combinedData;
 }
