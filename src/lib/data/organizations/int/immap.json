@@ -1,0 +1,15 @@
+{
+    "name": "iMMAP",
+    "cause": [17],  
+    "url": "https://immap.org/",
+    "description": "Detailed description present",
+    "office_locations_country": ">3",
+    "remote_possible": null, 
+    "initiative_application_possible": null,
+    "type": {
+      "framework": "Non-Profit",
+      "emphasis": "Consulting"
+    },
+    "working_languages": ["en"] 
+  }
+  

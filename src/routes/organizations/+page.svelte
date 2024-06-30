@@ -5,6 +5,7 @@
   import {getFlagEmoji, getSDGColor, getSDGName} from '$lib/js/helpers.js';
   import Type from '$lib/components/Type.svelte';
   import Category from '$lib/components/Category.svelte';
+
   export let data;
   $: organizations = data.organizations;
   $: uniqueCauses = data.uniqueCauses;
@@ -50,6 +51,7 @@
       they contribute to and their office locations {getFlagEmoji('Worldwide')}.
     </p>
   </div>
+
   <Select items={uniqueCauses} multiple clearable={true} bind:value={$values} />
 
   <div class=" m-auto grid gap-3 rounded lg:grid-cols-2">

@@ -1,0 +1,18 @@
+{
+    "name": "Welthungerhilfe",
+    "cause": [
+        2
+    ],
+    "url": "https://www.welthungerhilfe.de/",
+    "description": "Welthungerhilfe is a large independent aid organization, whose vision is a world where everyone can live a self-determined life with dignity and justice, free from hunger and poverty. Their data culture includes tools and systems for data collection and analysis, developing data visualization prototypes, applying ML techniques, and implementing an automated business intelligence infrastructure.",
+    "office_locations_country": [
+        "de"
+    ],
+    "working_languages": ["de"],
+    "remote_possible": null,
+    "initiative_application_possible": null,
+    "type": {
+        "framework": "Non-Profit",
+        "emphasis": "Cause Focused"
+    }
+}

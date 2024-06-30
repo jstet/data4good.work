@@ -1,0 +1,17 @@
+{
+    "name": "German Red Cross",
+    "cause": [3, 10, 16],  
+    "url": "https://drk-wohlfahrt.de/",
+    "description": "The GRC saves people, helps in emergencies, offers people a community, stands by the poor and needy and oversees international humanitarian law. Their Data Science Hub tests the use of data science methods for social services.",
+    "office_locations_country": [
+      "de"
+    ],
+    "remote_possible": null, 
+    "initiative_application_possible": null, 
+    "type": {
+      "framework": "Non-Profit",
+      "emphasis": "Cause-Focused"
+    },
+    "working_languages": ["de"] 
+  }
+  
