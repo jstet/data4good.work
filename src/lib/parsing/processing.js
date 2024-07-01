@@ -21,13 +21,11 @@ export function processOrganizations(data) {
     office_locations_country_name: _.map(
       org.office_locations_country,
       (country) => {
-        console.log(country.toUpperCase());
         return country === 'int'
           ? 'International'
           : iso3311a2.getCountry(country.toUpperCase());
       },
     ),
   }));
-  console.log(procOrganizations);
   return procOrganizations;
 }

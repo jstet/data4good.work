@@ -10,6 +10,8 @@
   import Select from 'svelte-select';
   import {onMount} from 'svelte';
   import {page} from '$app/stores';
+  import {browser} from '$app/environment';
+  import {goto} from '$app/navigation';
 
   export let origData;
   export let filteredData;
@@ -61,11 +63,9 @@
     values,
   );
 
-  $: history.replaceState(
-    history.state,
-    '',
-    setUrlParams($page.url, selects, values),
-  );
+  $: if (browser) {
+    goto(setUrlParams($page.url, selects, values), {keepFocus: true});
+  }
 </script>
 
 <div class="">
