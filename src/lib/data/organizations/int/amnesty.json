@@ -1,15 +1,16 @@
 {
-    "name": "Amnesty Tech",
-    "cause": [16],  
-    "url": "https://www.amnesty.org/en/tech/",
-    "description": "At Amnesty Tech, we believe it's time technology puts people and human rights first. We're a movement of 10 million people, and we've plugged hackers, coders, data scientists and technologists into our team too." ,
-    "office_locations_country": ">3",
-    "remote_possible": null, 
-    "initiative_application_possible": null, 
-    "type": {
-      "framework": "Non-Profit",
-      "emphasis": "Cause Focused"
-    },
-    "working_languages": ">3"
-  }
-  
+  "name": "Amnesty",
+  "sdgs": [
+    16
+  ],
+  "url": "https://www.amnesty.org/en/tech/",
+  "description": "The Amnesty Tech movement believes it's time technology puts people and human rights first. It's a movement of 10 million people, and we've plugged hackers, coders, data scientists and technologists into our team too.",
+  "office_locations_country": ["int"],
+  "remote_possible": null,
+  "initiative_application_possible": null,
+  "type": {
+    "framework": "Non-Profit",
+    "emphasis": "Cause Focused"
+  },
+  "working_languages": ["int"]
+}

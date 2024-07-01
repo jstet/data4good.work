@@ -1,36 +1,49 @@
 <script>
-  import _ from 'lodash';
-  import Select from 'svelte-select';
-  import {queryParam} from 'sveltekit-search-params';
-  import {getFlagEmoji, getSDGColor, getSDGName} from '$lib/js/helpers.js';
+  import {getFlagEmoji, getSDGColor} from '$lib/js/helpers.js';
   import Type from '$lib/components/Type.svelte';
   import Category from '$lib/components/Category.svelte';
+  import Filter from '$lib/components/Filter.svelte';
+  import Pagination from '$lib/components/Pagination.svelte';
 
   export let data;
   $: organizations = data.organizations;
-  $: uniqueCauses = data.uniqueCauses;
 
-  const values = queryParam('values', {
-    encode: (values) => _.map(values, 'value'),
-    decode: (values) =>
-      values === null
-        ? null
-        : _.map(values.split(','), (item) => ({
-          value: item,
-          label: getSDGName(item, false),
-        })),
-  });
+  let filteredData;
+  let trimmedData;
 
-  let filteredOrganizations;
-  $: if ($values !== undefined && $values !== null) {
-    const filterArray = _.map($values, 'value');
-    filteredOrganizations = _.filter(organizations, (org) =>
-      _.every(filterArray, (filterItem) => _.includes(org.cause, filterItem)),
-    );
-  } else {
-    filteredOrganizations = organizations;
-  }
-  $: console.log(filteredOrganizations);
+  $: selects = [
+    {
+      title: 'SDG',
+      searchable: false,
+      multiple: true,
+      param: 'sdgs_name',
+    },
+    {
+      title: 'Framework',
+      searchable: false,
+      multiple: false,
+      param: 'framework',
+    },
+    {
+      title: 'Emphasis',
+      searchable: false,
+      multiple: false,
+      param: 'emphasis',
+    },
+    {
+      title: 'Office Locations',
+      searchable: false,
+      multiple: true,
+      param: 'office_locations_country_name',
+    },
+  ];
+
+  $: console.log(organizations);
+
+  const searchOptions = [
+    {searchProperty: 'description', multiple: false},
+    {searchProperty: 'name', multiple: false},
+  ];
 </script>
 
 <div class="mx-auto max-w-[1200px] px-4 py-12 pt-6 lg:pt-12">
@@ -52,42 +65,58 @@
     </p>
   </div>
 
-  <Select items={uniqueCauses} multiple clearable={true} bind:value={$values} />
-
-  <div class=" m-auto grid gap-3 rounded lg:grid-cols-2">
-    {#each filteredOrganizations as organization}
-      <div class="border">
-        <div class="px-4 py-3">
-          <div class="mb-3 flex text-xl font-bold">
-            <a href={organization.url} class="link">{organization.name}</a>
-            <div class="flex flex-wrap pl-3">
-              {#each organization.office_locations_country as country}
-                <span class="mr-1 text-xl">{getFlagEmoji(country)}</span>
+  <Filter
+    origData={organizations}
+    expanded={true}
+    bind:filteredData
+    {selects}
+    {searchOptions}
+  />
+  <div class=" m-auto mt-12 grid gap-3 rounded lg:grid-cols-2">
+    {#if trimmedData}
+      {#each trimmedData as organization, i}
+        <div class="border">
+          <div class="px-4 py-3">
+            <div class="mb-3 flex text-xl font-bold">
+              <a href={organization.url} class="link">{organization.name}</a>
+              <div class="flex flex-wrap pl-3">
+                {#each organization.office_locations_country_alpha2 as country}
+                  <span class="mr-1 text-xl">{getFlagEmoji(country)}</span>
+                {/each}
+              </div>
+            </div>
+            <div class="mb-5 flex flex-wrap gap-2 lg:mb-2 lg:pt-0">
+              {#each organization.sdgs_name as sdgs_name, i}
+                <span
+                  class="px-2 py-1 font-oswald text-base text-xs font-[500] uppercase text-white"
+                  style="background-color: {getSDGColor(
+                    organization.sdgs_number[i],
+                  )};">{sdgs_name}</span
+                >
               {/each}
             </div>
-          </div>
-          <div class="mb-5 flex flex-wrap gap-2 lg:mb-2 lg:pt-0">
-            {#each organization.cause as cause}
-              <span
-                class="px-2 py-1 font-oswald text-base text-xs font-[500] text-white"
-                style="background-color: {getSDGColor(cause)};"
-                >{getSDGName(cause)}</span
-              >
-            {/each}
-          </div>
-          <div class="lg:py-2">
-            <p class="line-clamp-[9] min-h-[100px] text-sm lg:line-clamp-5">
-              {organization.description}
-            </p>
-          </div>
-          <div class="mb-2 mt-4 lg:mt-1">
-            <Type
-              framework={organization.type.framework.name}
-              emphasis={organization.type.emphasis.name}
-            />
+            <div class="lg:py-2">
+              <p class="line-clamp-[9] min-h-[100px] text-sm lg:line-clamp-5">
+                {organization.description}
+              </p>
+            </div>
+            <div class="mb-2 mt-4 lg:mt-1">
+              <Type
+                framework={organization.framework}
+                emphasis={organization.emphasis}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    {/each}
+      {/each}
+    {/if}
+
+    {#if filteredData}
+      <Pagination
+        items={filteredData}
+        perPage={8}
+        bind:trimmedItems={trimmedData}
+      />
+    {/if}
   </div>
 </div>

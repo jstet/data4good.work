@@ -1,15 +1,15 @@
 {
     "name": "iMMAP",
-    "cause": [17],  
+    "sdgs": [17],  
     "url": "https://immap.org/",
-    "description": "Detailed description present",
-    "office_locations_country": ">3",
+    "description": "iMMAP Inc. turns data into information and creates knowledge for decision makers operating in development contexts, situations of violence, post-disaster, and conflict recovery. Our mission is to harness the power of information to facilitate evidence-based decisions to improve people's lives.",
+    "office_locations_country": ["int"],
     "remote_possible": null, 
     "initiative_application_possible": null,
     "type": {
       "framework": "Non-Profit",
       "emphasis": "Consulting"
     },
-    "working_languages": ["en"] 
+    "working_languages": ["int"] 
   }
   

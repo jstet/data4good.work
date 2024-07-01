@@ -1,6 +1,6 @@
 import iso3311a2 from 'iso-3166-1-alpha-2';
 
-export const countries = iso3311a2.getCodes();
+export const countries = iso3311a2.getCodes() + ['int'];
 
 export const frameworks = [
   'For-Profit',

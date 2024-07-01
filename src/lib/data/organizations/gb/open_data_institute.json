@@ -1,6 +1,6 @@
 {
     "name": "Open Data Institute",
-    "cause": [17],  
+    "sdgs": [17],  
     "url": "https://www.theodi.org/about-the-odi/",
     "description": "The ODI is a non-profit company committed to advancing trust in data across the spectrum - from closed to shared to open data. We work to advance trust in data by providing training, consultancy services, tools and guides - all designed to enable organisations to become more confident and capable in their stewardship and use of data. ",
     "office_locations_country": [
