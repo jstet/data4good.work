@@ -3,10 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export function getFlagEmoji(countryName) {
-  if (countryName == 'Remote') {
-    return '🏠';
-  }
-  if (countryName == 'Worldwide') {
+  if (countryName == 'int') {
     return '🌍';
   }
   const flag = countryEmoji.flag(countryName);
@@ -16,6 +13,10 @@ export function getFlagEmoji(countryName) {
     return '';
   }
 }
+
+// if (countryName == 'Remote') {
+//   return '🏠';
+// }
 
 const sdgs = {
   1: {name: 'No Poverty', hex: '#E5243B'},
@@ -43,7 +44,7 @@ export function getSDGColor(goal) {
 
 export function getSDGName(goal, upper = true) {
   if (upper) {
-    return sdgs[goal].name.toUpperCase();
+    return sdgs[goal].name;
   }
   return sdgs[goal].name;
 }

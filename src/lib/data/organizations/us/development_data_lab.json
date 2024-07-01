@@ -1,0 +1,17 @@
+{
+    "name": "Development Data Lab",
+    "sdgs": [17], 
+    "url": "https://www.devdatalab.org/",
+    "description": "We collect many new kinds of data, including measures of well-being generated from satellite images, data exhaust from government programs, and archival administrative records not previously used for policy design. Our open data platform (the SHRUG) seamlessly stitches these data sources together, making it one of India’s first high-resolution geographic frameworks for socioeconomic analysis. Our research uses cutting edge econometric and machine learning tools to generate policy-relevant insights that would be difficult to arrive at using other data sources. We focus on understanding how people born into poverty can live fulfilling and productive lives—and which policies and programs can help them do so.",
+    "office_locations_country": [
+      "us"
+    ],
+    "working_languages": ["en"],
+    "remote_possible": false, 
+    "initiative_application_possible": null, 
+    "type": {
+      "framework": "Non-Profit",
+      "emphasis": "Cause Focused"
+    }
+  }
+  

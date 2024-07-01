@@ -1,10 +1,10 @@
 {
     "name": "Prosperia Social",
-    "cause": [16],  
+    "sdgs": [16],  
     "url": "https://www.prosperia.ai/",
     "description": "Prosperia Social is a social enterprise revolutionizing  the design, targeting and management of social policies, by leveraging data science, AI and interactive decision support towards positive social impact at a large scale. We empower governments, international organizations, and NGOs to implement more accurate, equitable, efficient and transparent policies.",
     "office_locations_country": [
-      "mex"
+      "mx"
     ],
     "remote_possible": null,
     "initiative_application_possible": null, 

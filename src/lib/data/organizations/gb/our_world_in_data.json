@@ -1,8 +1,8 @@
 {
     "name": "Our World in Data",
-    "cause": [17],  
+    "sdgs": [17],  
     "url": "https://ourworldindata.org/about",
-    "description": "Detailed description present",
+    "description": "Our World in Data (OWID) is a scientific online publication that focuses on large global problems such as poverty, disease, hunger, climate change, war, existential risks, and inequality. Thanks to the work of thousands of researchers around the world who dedicate their lives to it, we often have a good understanding of how it is possible to make progress against the large problems we are facing. The world has the resources to do much better and reduce the suffering in the world. We believe that a key reason why we fail to achieve the progress we are capable of is that we do not make enough use of this existing research and data: the important knowledge is often stored in inaccessible databases, locked away behind paywalls and buried under jargon in academic papers.",
     "office_locations_country": [
       "gb"
     ],
