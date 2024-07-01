@@ -38,8 +38,6 @@
     },
   ];
 
-  $: console.log(organizations);
-
   const searchOptions = [
     {searchProperty: 'description', multiple: false},
     {searchProperty: 'name', multiple: false},
@@ -67,7 +65,7 @@
 
   <Filter
     origData={organizations}
-    expanded={true}
+    expanded={false}
     bind:filteredData
     {selects}
     {searchOptions}
