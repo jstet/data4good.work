@@ -27,7 +27,6 @@ export const validateLanguage = (value) => {
     return 'Must be 2 characters';
   }
   try {
-    console.log(validateLanguageCode(value), value);
     validateLanguageCode(value);
     return true;
   } catch (e) {
