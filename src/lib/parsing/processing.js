@@ -26,6 +26,9 @@ export function processOrganizations(data) {
           : iso3311a2.getCountry(country.toUpperCase());
       },
     ),
+    working_languages: _.map(org.working_languages, (country) =>
+      country.toLowerCase(),
+    ),
   }));
   return procOrganizations;
 }

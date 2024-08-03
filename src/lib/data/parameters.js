@@ -10,8 +10,8 @@ export const frameworks = [
 ];
 
 export const emphasis = [
-  'Product Focused',
-  'Cause Focused',
+  'Product-Focused',
+  'Cause-Focused',
   'Consulting',
   'Research',
   'Enabling',
