@@ -26,15 +26,25 @@ The motivation behind this project is to provide an overview of organizations th
 
 The content of data4good.work is managed with static files that are part of the folder `src/lib/data/organizations`. 
 
+### Edit Organization
+
+1. To edit an organizations, first complete the dev setup described above and depending on your access rights fork this repo or create a branch. 
+
+2. Then go to the corresponding foler and make the change.
+
+3. After making your changes, test them with `npm run dev` and open a PR that one of the admins will review and merge.
+
+### Add Organization
+
 1. To add organizations, first complete the dev setup described above and depending on your access rights fork this repo or create a branch. 
 
-2. Then you can either add files manually, or run a script: 
+2. Then you can either add files manually (simply copy an exising file and adjust the values), or run a script that will prompt you to provide necessary data and create the file automatically: 
 
     ```
     node scripts/add_org.js
     ```
 
-3. After adding organizations, open a PR that one of the admins will review and merge.
+3. After adding organizations, test your changes with `npm run dev` and open a PR that one of the admins will review and merge.
 
 
 
