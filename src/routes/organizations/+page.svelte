@@ -108,13 +108,14 @@
         </div>
       {/each}
     {/if}
-
-    {#if filteredData}
+  </div>
+  {#if filteredData}
+    <div class="m-auto mt-12">
       <Pagination
         items={filteredData}
         perPage={8}
         bind:trimmedItems={trimmedData}
       />
-    {/if}
-  </div>
+    </div>
+  {/if}
 </div>
