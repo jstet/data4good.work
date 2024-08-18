@@ -1,0 +1,24 @@
+{
+  "name": "ACLED (Armed Conflict Location and Event Data Project)",
+  "sdgs": [
+    "16"
+  ],
+  "url": "https://acleddata.com",
+  "description": "The Armed Conflict Location & Event Data Project (ACLED) is a disaggregated data collection, analysis, and crisis mapping project. ACLED collects information on the dates, actors, locations, fatalities, and types of all reported political violence and protest events around the world. The ACLED team conducts analysis to describe, explore, and test conflict scenarios, and makes both data and analysis open for free use by the public.",
+  "office_locations_country": [
+    "us"
+  ],
+  "remote_possible": [
+    true
+  ],
+  "initiative_application_possible": [
+    true
+  ],
+  "working_languages": [
+    "en"
+  ],
+  "type": {
+    "framework": "Non-Profit",
+    "emphasis": "Cause-Focused"
+  }
+}
