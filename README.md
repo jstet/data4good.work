@@ -1,3 +1,6 @@
+> **Mirror** — This repository is mirrored from [tangled.org/jstet.net/data4good.work](https://tangled.org/jstet.net/data4good.work). Please open issues and PRs there.
+
+
 # data4good.work
 
 A simple website containing a taxonomy and a list of organizations that leverage data to advance the Sustainable Development Goals.
