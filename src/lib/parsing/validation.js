@@ -1,4 +1,3 @@
-/* eslint-disable no-invalid-this */
 import * as yup from 'yup';
 import iso3311a2 from 'iso-3166-1-alpha-2';
 import {validateLanguageCode} from 'iso-lang-codes';
