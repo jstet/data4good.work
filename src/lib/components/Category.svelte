@@ -1,8 +1,14 @@
 <script>
-  export let category;
-  export let size = 'md';
-  export let half = false;
-  export let label;
+  /**
+   * @typedef {Object} Props
+   * @property {any} category
+   * @property {string} [size]
+   * @property {boolean} [half]
+   * @property {any} label
+   */
+
+  /** @type {Props} */
+  let {category, size = 'md', half = false, label} = $props();
 
   const bg_color =
     category === 'emphasis'

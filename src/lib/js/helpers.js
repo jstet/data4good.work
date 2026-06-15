@@ -1,14 +1,14 @@
-import countryEmoji from 'country-emoji';
+import {flag} from 'country-emoji';
 import fs from 'fs';
 import path from 'path';
 
 export function getFlagEmoji(countryName) {
-  if (countryName == 'int') {
+  if (countryName == 'int' || countryName == 'Worldwide') {
     return '🌍';
   }
-  const flag = countryEmoji.flag(countryName);
-  if (flag) {
-    return flag;
+  const emoji = flag(countryName);
+  if (emoji) {
+    return emoji;
   } else {
     return '';
   }

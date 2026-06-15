@@ -1,9 +1,15 @@
 <script>
   import Category from '$lib/components/Category.svelte';
 
-  export let framework;
-  export let emphasis;
-  export let size = 'md';
+  /**
+   * @typedef {Object} Props
+   * @property {any} framework
+   * @property {any} emphasis
+   * @property {string} [size]
+   */
+
+  /** @type {Props} */
+  let {framework, emphasis, size = 'md'} = $props();
 
   const padding = size === 'lg' ? 'p-3' : '';
 </script>

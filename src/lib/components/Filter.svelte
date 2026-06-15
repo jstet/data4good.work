@@ -1,4 +1,6 @@
 <script>
+  import {run} from 'svelte/legacy';
+
   import {
     filter,
     genDropdownLists,
@@ -13,18 +15,29 @@
   import {browser} from '$app/environment';
   import {goto} from '$app/navigation';
 
-  export let origData;
-  export let filteredData;
-  export let expanded = false;
+  /**
+   * @typedef {Object} Props
+   * @property {any} origData
+   * @property {any} filteredData
+   * @property {boolean} [expanded]
+   * @property {any} selects
+   * @property {any} searchOptions
+   */
 
-  export let selects;
-  export let searchOptions;
+  /** @type {Props} */
+  let {
+    origData,
+    filteredData = $bindable(),
+    expanded = false,
+    selects = $bindable(),
+    searchOptions,
+  } = $props();
 
-  let hidden = 'hidden';
-  let ariaExpanded = false;
-  let searchTerm;
+  let hidden = $state('hidden');
+  let ariaExpanded = $state(false);
+  let searchTerm = $state();
 
-  const values = {};
+  const values = $state({});
 
   onMount(async () => {
     // when searchParams is set, set them in filter
@@ -39,7 +52,9 @@
       hidden = 'visible';
     }
   });
-  $: selects = genDropdownLists(origData, selects);
+  run(() => {
+    selects = genDropdownLists(origData, selects);
+  });
 
   function handleHidden() {
     hidden = hidden === 'hidden' ? 'visible' : 'hidden';
@@ -53,28 +68,33 @@
       }
     }
   }
-  $: changeVal(values);
+  run(() => {
+    changeVal(values);
+  });
 
-  $: filteredData = filter(
-    origData,
-    selects,
-    searchTerm,
-    searchOptions,
-    values,
-  );
+  run(() => {
+    filteredData = filter(origData, selects, searchTerm, searchOptions, values);
+  });
 
-  $: if (browser) {
-    goto(setUrlParams($page.url, selects, values), {keepFocus: true});
-  }
+  run(() => {
+    // reads `selects` (via setUrlParams) so this reruns when filters change.
+    // base URL on window.location, NOT $page.url, to avoid an infinite
+    // goto → $page.url change → rerun → goto loop.
+    if (!browser) return;
+    const newUrl = setUrlParams(new URL(window.location.href), selects);
+    if (newUrl.search !== window.location.search) {
+      goto(newUrl, {keepFocus: true, noScroll: true, replaceState: true});
+    }
+  });
 </script>
 
 <div class="">
-  <div class="border-neutral-25 border-b">
+  <div class="border-base-300 border-b">
     <button
       class="inline-flex items-center justify-center pb-1 text-xl font-semibold transition hover:text-secondary"
       aria-expanded={ariaExpanded}
       aria-controls="filter"
-      on:click={handleHidden}
+      onclick={handleHidden}
     >
       Filter
       <DropdownIcon height={27} width={27} />
@@ -90,7 +110,7 @@
         <input
           bind:value={searchTerm}
           placeholder="Search..."
-          class="border-neutral-25 h-full w-full rounded-md border p-2 pl-4"
+          class="border-base-300 h-full w-full rounded-md border p-2 pl-4"
           data-testid="filter-search"
         />
       </div>
@@ -112,8 +132,14 @@
             multiple={select.multiple}
             bind:value={values[select.param]}
             --list-z-index="30"
+            --border="1px solid var(--color-base-300)"
+            --border-hover="1px solid var(--color-base-300)"
+            --border-focused="1px solid var(--color-base-300)"
+            --border-radius="0.375rem"
           >
-            <div slot="empty" /></Select
+            {#snippet empty()}
+              <div></div>
+            {/snippet}</Select
           >
         </div>
       </div>
