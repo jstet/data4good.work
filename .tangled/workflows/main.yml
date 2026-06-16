@@ -9,4 +9,4 @@ dependencies:
     - curl
 steps:
   - name: "Trigger build"
-    command: "curl 'https://coolify.lan/api/v1/deploy?uuid=smgch5844ep5v507r0zujmr0&force=false' -H \"Authorization: Bearer $DEPLOY_KEY\""
+    command: "curl 'http://192.168.100.20:8000/api/v1/deploy?uuid=smgch5844ep5v507r0zujmr0&force=false' -H \"Authorization: Bearer $DEPLOY_KEY\""
